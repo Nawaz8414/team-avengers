@@ -1,5 +1,5 @@
 # Intelligent Jobseeker Engagement Platform 🚀
-
+DEPLOYED LINK : https://team-avengers-rjb2sdqnfcnh5ezmkrehrh.streamlit.app/
 AI-powered platform for:
 - Resume analysis
 - Skill gap detection
