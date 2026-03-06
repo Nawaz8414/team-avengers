@@ -47,7 +47,7 @@ Be structured and professional.
     })
 
     response = client.chat.completions.create(
-        model="openai/gpt-4o-mini",
+        model="openai/gpt-4o",
         messages=messages,
         temperature=0.7
     )
