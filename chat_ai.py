@@ -1,16 +1,13 @@
-# chat_ai.py
 import streamlit as st
 from openai import OpenAI
-
-
 
 client = OpenAI(
     api_key=st.secrets["OPENROUTER_API_KEY"],
     base_url="https://openrouter.ai/api/v1",
     default_headers={
         "HTTP-Referer": "https://your-app-name.streamlit.app",
-        "X-Title": "AI Jobseeker Platform"
-    }
+        "X-Title": "AI Jobseeker Platform",
+    },
 )
 
 def generate_chat_response(user_message, resume_data, mode="jobseeker", chat_history=None):
@@ -38,7 +35,6 @@ Be structured and professional.
         {"role": "system", "content": f"Resume Analysis:\n{resume_data}"}
     ]
 
-    # ✅ FIX: map UI roles → API roles
     for role, content in chat_history:
         if role.lower() in ["you", "user"]:
             messages.append({"role": "user", "content": content})
